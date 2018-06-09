@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/brfv4_examples_theme.css">
+	<title>Beyond Reality Face - BRFv4 - HTML5/Javascript face tracking</title>
+
+	<!--<script src="js/libs/createjs/preloadjs-0.6.2.min.js"></script>-->
+	<script src="js/libs/createjs/preloadjs.min.js"></script>
+	<script src="js/BRFv4Demo.js"></script>
+
+	<script>
+		window.onload = brfv4Example.start; //see js/BRFv4Demo.js
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5620419-18"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-5620419-18');
+	</script>
+
+</head>
+
+<body>
+
+    <div id="_wrapper">
+        <div id="_content">
+            <video id="_webcam" playsinline></video>
+            <canvas id="_imageData"></canvas>
+            <canvas id="_faceSub"></canvas>
+            <canvas id="_t3d"></canvas>
+            <canvas id="_f3d"></canvas>
+            <canvas id="_drawing"></canvas>
+            <div id="_progressBar"></div>
+        </div>
+        <!--
+    <div id="_subline"></div>
+    <div id="_highlight"><pre><code class="javascript" id="_gist"></code></pre></div>
+    -->
+    </div>
+    <div class="ar-opitons" style="position:fixed; top:0; right:0; background-color:#aaa;">
+        <div class="ar-opitons-group">
+            <div class="ar-options-caption">偏移量</div>
+            <div class="ar-options-row">
+                <button class="ar-options-button-up" type="button" onclick="brfv4Example.positionOffest(1,-0.025);">上</button>
+                <button class="ar-options-button-down" type="button" onclick="brfv4Example.positionOffest(1,0.025);">下</button>
+            </div>
+            <div class="ar-options-row">
+                <button class="ar-options-button-left" type="button" onclick="brfv4Example.positionOffest(0,0.025);">左</button>
+                <button class="ar-options-button-right" type="button" onclick="brfv4Example.positionOffest(0,-0.025);">右</button>
+            </div>
+        </div>
+        <div class="ar-opitons-group">
+            <div class="ar-options-caption">縮放</div>
+            <div class="ar-options-row">
+                <button class="ar-options-button-up" type="button" onclick="brfv4Example.ScaleOffest(0.025);"> + </button>
+                <button class="ar-options-button-down" type="button" onclick="brfv4Example.ScaleOffest(-0.025);"> - </button>
+            </div>
+        </div>
+        <div class="ar-opitons-group">
+            <div class="ar-options-caption">其他</div>
+            <div class="ar-options-row">
+                <button class="ar-options-button-reset" type="button" onclick="brfv4Example.resetAll([0.5, 0.18], 1.2);">重設位置＆大小</button><br>
+                <a class="ar-options-button-download" onclick="this.href=brfv4Example.downloadPicture();" id="OnclickToDownload" download="下載搭配.png" href="#">下載圖片</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
