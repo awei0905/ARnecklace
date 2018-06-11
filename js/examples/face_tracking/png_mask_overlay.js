@@ -176,7 +176,7 @@
 
     var _imageURLs      = ["assets/123.png",  "assets/234.png",  "assets/456.png",  "assets/345.png"];
 	var _imageScales	= [1.2, 1.2, 1.1, 1.2];
-    var _imageDirectionOffset = [0.5, 0.18];
+    var _imageDirectionOffset = [0.5, 0.12];
 
 	var _images			= [];
 	var _image			= null;

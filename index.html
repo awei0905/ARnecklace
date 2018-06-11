@@ -16,7 +16,23 @@
 	<script>
 		window.onload = brfv4Example.start; //see js/BRFv4Demo.js
 	</script>
+    <style>
+        .zoom {
+            transition: transform .2s; /* Animation */
+        }
 
+            .zoom:hover {
+                transform: scale(1.18); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+
+        .zoom1 {
+            transition: transform .2s; /* Animation */
+        }
+
+            .zoom1:hover {
+                transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+    </style>
 </head>
 
 <body style="background-color:#444; font-family: 'Noto Sans TC', sans-serif;">
@@ -40,26 +56,26 @@
             <div class="ar-opitons-group">
                 <h3 class="ar-options-caption">偏移量</h3>
                 <div class="ar-options-row">
-                    <button class="mui-btn mui-btn--raised mui-btn--primary ar-options-button-up" type="button" onclick="brfv4Example.positionOffest(1,-0.025);">上</button>
-                    <button class="mui-btn mui-btn--raised mui-btn--primary ar-options-button-down" type="button" onclick="brfv4Example.positionOffest(1,0.025);">下</button>
+                    <button class="mui-btn mui-btn--raised mui-btn--primary ar-options-button-up zoom" type="button" onclick="brfv4Example.positionOffest(1,-0.025);">上</button>
+                    <button class="mui-btn mui-btn--raised mui-btn--primary ar-options-button-down zoom" type="button" onclick="brfv4Example.positionOffest(1,0.025);">下</button>
                 </div>
                 <div class="ar-options-row">
-                    <button class="mui-btn mui-btn--raised mui-btn--primary ar-options-button-left" type="button" onclick="brfv4Example.positionOffest(0,0.025);">左</button>
-                    <button class="mui-btn mui-btn--raised mui-btn--primary ar-options-button-right" type="button" onclick="brfv4Example.positionOffest(0,-0.025);">右</button>
+                    <button class="mui-btn mui-btn--raised mui-btn--primary ar-options-button-left zoom" type="button" onclick="brfv4Example.positionOffest(0,0.025);">左</button>
+                    <button class="mui-btn mui-btn--raised mui-btn--primary ar-options-button-right zoom" type="button" onclick="brfv4Example.positionOffest(0,-0.025);">右</button>
                 </div>
             </div>
             <div class="ar-opitons-group">
                 <h3 class="ar-options-caption">縮放</h3>
                 <div class="ar-options-row">
-                    <button class="mui-btn mui-btn--fab mui-btn--primary ar-options-button-up" type="button" onclick="brfv4Example.ScaleOffest(0.025);"> + </button>
-                    <button class="mui-btn mui-btn--fab mui-btn--primary ar-options-button-down" type="button" onclick="brfv4Example.ScaleOffest(-0.025);"> - </button>
+                    <button class="mui-btn mui-btn--fab mui-btn--primary ar-options-button-up zoom" type="button" onclick="brfv4Example.ScaleOffest(0.025);"> 放大 </button>
+                    <button class="mui-btn mui-btn--fab mui-btn--primary ar-options-button-down zoom" type="button" onclick="brfv4Example.ScaleOffest(-0.025);"> 縮小 </button>
                 </div>
             </div>
             <div class="ar-opitons-group">
                 <h3 class="ar-options-caption">其他</h3>
                 <div class="ar-options-row">
-                    <button class="mui-btn mui-btn--raised  mui-btn--danger ar-options-button-reset" type="button" onclick="brfv4Example.resetAll([0.5, 0.18], 1.2);">重設位置＆大小</button><br>
-                    <a class="mui-btn mui-btn--raised  ar-options-button-download" style="width:100px;" onclick="this.href=brfv4Example.downloadPicture();" id="OnclickToDownload" download="下載搭配.png" href="#">下載搭配</a>
+                    <button class="mui-btn mui-btn--raised  mui-btn--danger ar-options-button-reset zoom1" type="button" onclick="brfv4Example.resetAll([0.5, 0.12], 1.2);">重設位置＆大小</button><br>
+                    <a class="mui-btn mui-btn--raised  ar-options-button-download zoom1" style="width:100px;" onclick="this.href=brfv4Example.downloadPicture();" id="OnclickToDownload" download="下載搭配.png" href="#">下載搭配</a>
                 </div>
             </div>
 
